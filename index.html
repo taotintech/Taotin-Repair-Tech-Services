@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Labor Price List | Taotin Repair & Tech Services</title>
+  <meta name="description" content="Professional hardware repair price list for PCs, Macs, laptops, phones, iPads, and tablets at Taotin Repair & Tech Services." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0a0e1a;
+      --navy-mid: #10172a;
+      --navy-card: #131c30;
+      --navy-border: #1e2d4a;
+      --cyan: #00d4ff;
+      --cyan-dim: #00aacb;
+      --teal: #00ffcc;
+      --purple: #7b5ea7;
+      --purple-light: #a27bca;
+      --amber: #ffb347;
+      --green: #00e676;
+      --red: #ff5252;
+      --text-primary: #e8f0ff;
+      --text-secondary: #8a9bc5;
+      --text-muted: #4a5a7a;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--navy);
+      color: var(--text-primary);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── ANIMATED BACKGROUND ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 10%, rgba(0,212,255,.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 80% 80%, rgba(123,94,167,.1) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 30% at 55% 45%, rgba(0,255,204,.05) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── GRID LINES ── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,212,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,212,255,.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrapper { position: relative; z-index: 1; }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #060c1a 0%, #0d1528 50%, #060c1a 100%);
+      border-bottom: 1px solid var(--navy-border);
+      padding: 0 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: contain;
+      background: #fff;
+      border: 2px solid rgba(0,100,255,.4);
+      box-shadow: 0 0 18px rgba(0,80,255,.35), 0 0 6px rgba(255,0,0,.2);
+      padding: 2px;
+    }
+
+    .brand-text { line-height: 1.2; }
+    .brand-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--cyan), var(--teal));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: .5px;
+    }
+    .brand-tagline {
+      font-size: .7rem;
+      color: var(--text-secondary);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .header-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,212,255,.08);
+      border: 1px solid rgba(0,212,255,.2);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: .78rem;
+      color: var(--cyan);
+      font-weight: 500;
+    }
+    .header-badge::before {
+      content: '';
+      width: 8px; height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--green);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .6; transform: scale(.8); }
+    }
+
+    /* ── HERO ── */
+    .hero {
+      text-align: center;
+      padding: 72px 2rem 56px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,212,255,.06);
+      border: 1px solid rgba(0,212,255,.15);
+      border-radius: 20px;
+      padding: 6px 18px;
+      font-size: .75rem;
+      color: var(--cyan);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, var(--cyan) 0%, var(--teal) 50%, var(--purple-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+
+    /* ── STATS ROW ── */
+    .stats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 72px;
+    }
+
+    .stat-card {
+      background: var(--navy-card);
+      border: 1px solid var(--navy-border);
+      border-radius: 16px;
+      padding: 20px 32px;
+      text-align: center;
+      min-width: 140px;
+      position: relative;
+      overflow: hidden;
+      transition: transform .3s, border-color .3s;
+    }
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--cyan), var(--teal));
+      opacity: 0;
+      transition: opacity .3s;
+    }
+    .stat-card:hover { transform: translateY(-4px); border-color: var(--cyan-dim); }
+    .stat-card:hover::before { opacity: 1; }
+    .stat-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.9rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--cyan), var(--teal));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-label { font-size: .75rem; color: var(--text-secondary); margin-top: 4px; letter-spacing: .5px; }
+
+    /* ── NAV TABS ── */
+    .tabs-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .tab-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--navy-card);
+      border: 1px solid var(--navy-border);
+      border-radius: 12px;
+      padding: 10px 20px;
+      color: var(--text-secondary);
+      font-family: 'Outfit', sans-serif;
+      font-size: .9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .25s;
+      white-space: nowrap;
+    }
+    .tab-btn .icon { font-size: 1.1rem; }
+    .tab-btn:hover { border-color: var(--cyan-dim); color: var(--cyan); background: rgba(0,212,255,.05); }
+    .tab-btn.active {
+      background: linear-gradient(135deg, rgba(0,212,255,.15), rgba(0,255,204,.08));
+      border-color: var(--cyan);
+      color: var(--cyan);
+      box-shadow: 0 4px 24px rgba(0,212,255,.15);
+    }
+
+    /* ── SECTION ── */
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem 64px;
+      display: none;
+    }
+    .section.active { display: block; }
+
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .section-title-wrap { }
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-title .icon { font-size: 1.6rem; }
+    .section-subtitle { font-size: .85rem; color: var(--text-secondary); margin-top: 4px; }
+
+    .section-note {
+      background: rgba(0,212,255,.06);
+      border: 1px solid rgba(0,212,255,.15);
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-size: .8rem;
+      color: var(--cyan);
+    }
+
+    /* ── PRICE TABLE ── */
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .price-table thead tr {
+      background: linear-gradient(90deg, rgba(0,212,255,.12), rgba(0,255,204,.06));
+    }
+    .price-table thead th {
+      font-family: 'Outfit', sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      padding: 14px 20px;
+      text-align: left;
+    }
+    .price-table thead th:last-child { text-align: right; }
+
+    .price-table tbody tr {
+      background: var(--navy-card);
+      border-bottom: 1px solid var(--navy-border);
+      transition: background .2s;
+    }
+    .price-table tbody tr:hover { background: rgba(0,212,255,.04); }
+    .price-table tbody tr:last-child { border-bottom: none; }
+
+    .price-table td {
+      padding: 16px 20px;
+      font-size: .9rem;
+      vertical-align: middle;
+    }
+
+    .service-name {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .service-note {
+      font-size: .75rem;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .complexity {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+    }
+    .dot.green { background: var(--green); box-shadow: 0 0 6px var(--green); }
+    .dot.amber { background: var(--amber); box-shadow: 0 0 6px var(--amber); }
+    .dot.red { background: var(--red); box-shadow: 0 0 6px var(--red); }
+    .complexity-label { font-size: .75rem; color: var(--text-secondary); }
+
+    .price-cell { text-align: right; }
+    .price {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--teal);
+    }
+    .price-range {
+      font-size: .78rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+    }
+    .badge-popular { background: rgba(0,212,255,.15); color: var(--cyan); border: 1px solid rgba(0,212,255,.3); }
+    .badge-new { background: rgba(0,255,204,.15); color: var(--teal); border: 1px solid rgba(0,255,204,.3); }
+    .badge-call { background: rgba(255,179,71,.15); color: var(--amber); border: 1px solid rgba(255,179,71,.3); }
+
+    /* ── GROUP HEADERS ── */
+    .group-header td {
+      background: linear-gradient(90deg, rgba(123,94,167,.12), transparent);
+      border-left: 3px solid var(--purple);
+      color: var(--purple-light);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: .82rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 10px 20px;
+    }
+
+    /* ── NOTE BOX ── */
+    .info-box {
+      background: var(--navy-card);
+      border: 1px solid var(--navy-border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .info-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .info-text strong {
+      display: block;
+      font-family: 'Outfit', sans-serif;
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .info-text p { font-size: .8rem; color: var(--text-secondary); line-height: 1.5; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #060c1a;
+      border-top: 1px solid var(--navy-border);
+      padding: 40px 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+    .footer-logo {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--cyan), var(--teal));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+    }
+    .footer-note { font-size: .8rem; color: var(--text-muted); line-height: 1.7; }
+    .footer-note strong { color: var(--text-secondary); }
+    .footer-copy { margin-top: 20px; font-size: .72rem; color: var(--text-muted); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .price-table thead th:nth-child(2) { display: none; }
+      .price-table td:nth-child(2) { display: none; }
+      .section-header { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .section.active .price-table {
+      animation: fadeInUp .4s ease forwards;
+    }
+
+    /* ── PRINT BUTTON ── */
+    .print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--cyan), var(--teal));
+      color: var(--navy);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: .85rem;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 22px;
+      cursor: pointer;
+      transition: all .25s;
+    }
+    .print-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,212,255,.35);
+    }
+
+    @media print {
+      body { background: white; color: black; }
+      body::before, body::after { display: none; }
+      header { position: static; background: white; border-bottom: 2px solid #0a0e1a; }
+      .tabs-wrap { display: none; }
+      .section { display: block !important; }
+      .print-btn { display: none; }
+      .price-table tbody tr { background: #f9f9f9 !important; }
+      .price { color: #005a7a !important; }
+      footer { background: white; color: #333; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <img src="taotin_logo.jpg" alt="Taotin Logo" class="brand-logo" id="brand-logo-img" />
+        <div class="brand-text">
+          <div class="brand-name">Taotin Repair &amp; Tech Services</div>
+          <div class="brand-tagline">Professional Hardware Repair Specialists</div>
+        </div>
+      </div>
+      <div class="header-badge">Open &amp; Accepting Repairs</div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">⚡ Official Price List — 2026</div>
+    <h1>Hardware Repair<br /><span>Labor Price Guide</span></h1>
+    <p class="hero-desc">
+      Transparent, fair pricing for all your device repair needs. 
+      Prices are labor-only unless otherwise noted. Parts quoted separately.
+    </p>
+
+    <div class="stats">
+      <div class="stat-card">
+        <div class="stat-num">$35+</div>
+        <div class="stat-label">Starting Labor</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Device Categories</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">24hr</div>
+        <div class="stat-label">Most Turnarounds</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">90-Day</div>
+        <div class="stat-label">Labor Warranty</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs-wrap">
+    <div class="tabs" role="tablist">
+      <button class="tab-btn active" onclick="showTab('pc')" id="tab-pc" role="tab" aria-selected="true">
+        <span class="icon">🖥️</span> PC / Desktop
+      </button>
+      <button class="tab-btn" onclick="showTab('mac')" id="tab-mac" role="tab">
+        <span class="icon">🍎</span> Mac / iMac
+      </button>
+      <button class="tab-btn" onclick="showTab('laptop')" id="tab-laptop" role="tab">
+        <span class="icon">💻</span> Laptops
+      </button>
+      <button class="tab-btn" onclick="showTab('phone')" id="tab-phone" role="tab">
+        <span class="icon">📱</span> Phones
+      </button>
+      <button class="tab-btn" onclick="showTab('tablet')" id="tab-tablet" role="tab">
+        <span class="icon">📟</span> iPad &amp; Tablets
+      </button>
+    </div>
+
+    <!-- ══════════════════════ PC SECTION ══════════════════════ -->
+    <section class="section active" id="sec-pc" aria-labelledby="tab-pc">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-title"><span class="icon">🖥️</span> PC &amp; Desktop Repair</div>
+          <div class="section-subtitle">Windows, Custom Builds, All-in-Ones</div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;">
+          <div class="section-note">💡 Parts quoted separately</div>
+          <button class="print-btn" onclick="window.print()">🖨️ Print / Save PDF</button>
+        </div>
+      </div>
+
+      <table class="price-table" id="pc-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Difficulty</th>
+            <th>Est. Time</th>
+            <th>Labor Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-header"><td colspan="4">🔧 Diagnostics &amp; Setup</td></tr>
+          <tr>
+            <td><div class="service-name">Full System Diagnostics <span class="badge badge-popular">Popular</span></div><div class="service-note">Hardware &amp; software check, written report</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>1 hr</td>
+            <td class="price-cell"><div class="price">$35</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">New PC Build / Assembly</div><div class="service-note">Customer-supplied components</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>2–3 hrs</td>
+            <td class="price-cell"><div class="price">$80 – $120</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">OS Installation (Windows / Linux)</div><div class="service-note">Clean install + driver setup</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>1–2 hrs</td>
+            <td class="price-cell"><div class="price">$50</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Data Backup &amp; Transfer</div><div class="service-note">Up to 1 TB</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>1–4 hrs</td>
+            <td class="price-cell"><div class="price">$45 – $70</div></td>
+          </tr>
+
+          <tr class="group-header"><td colspan="4">⚡ Hardware Upgrades &amp; Replacement</td></tr>
+          <tr>
+            <td><div class="service-name">RAM Upgrade / Replacement</div><div class="service-note">Install &amp; test</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>30 min</td>
+            <td class="price-cell"><div class="price">$35</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">HDD / SSD Replacement + Data Migration <span class="badge badge-popular">Popular</span></div><div class="service-note">Clone or fresh install</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>2–3 hrs</td>
+            <td class="price-cell"><div class="price">$65 – $85</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">GPU / Video Card Replacement</div><div class="service-note">Install, driver &amp; display test</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1 hr</td>
+            <td class="price-cell"><div class="price">$55</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">CPU Replacement &amp; Thermal Paste</div><div class="service-note">Include stress test</div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>1–2 hrs</td>
+            <td class="price-cell"><div class="price">$75 – $100</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Motherboard Replacement</div><div class="service-note">Transfer components + OS re-activation</div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>3–4 hrs</td>
+            <td class="price-cell"><div class="price">$120 – $150</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Power Supply Replacement</div><div class="service-note">Test all rails after install</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1 hr</td>
+            <td class="price-cell"><div class="price">$55</div></td>
+          </tr>
+
+          <tr class="group-header"><td colspan="4">🌬️ Cleaning &amp; Thermal Care</td></tr>
+          <tr>
+            <td><div class="service-name">Full Internal Clean &amp; Dust Removal</div><div class="service-note">Compressed air, brushes, fan cleaning</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>45 min</td>
+            <td class="price-cell"><div class="price">$40</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">CPU Cooler Replacement + Thermal Paste</div><div class="service-note">Reapply paste, new cooler mount</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1 hr</td>
+            <td class="price-cell"><div class="price">$55</div></td>
+          </tr>
+
+          <tr class="group-header"><td colspan="4">🦠 Software &amp; Virus</td></tr>
+          <tr>
+            <td><div class="service-name">Virus / Malware Removal <span class="badge badge-popular">Popular</span></div><div class="service-note">Deep scan + cleanup + security setup</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1–3 hrs</td>
+            <td class="price-cell"><div class="price">$55 – $75</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Software Troubleshooting &amp; Optimization</div><div class="service-note">Startup tuning, driver fixes, updates</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>1 hr</td>
+            <td class="price-cell"><div class="price">$45</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Password Reset / Account Recovery</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>30 min</td>
+            <td class="price-cell"><div class="price">$35</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Data Recovery (Failed Drive) <span class="badge badge-call">Quote</span></div><div class="service-note">Price depends on damage severity</div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>Varies</td>
+            <td class="price-cell"><div class="price">$80 – $200+</div><div class="price-range">Call for quote</div></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="info-box">
+        <div class="info-item"><div class="info-icon">🕐</div><div class="info-text"><strong>Diagnostic Fee</strong><p>$35 diagnostic fee applies. Waived if you proceed with repair.</p></div></div>
+        <div class="info-item"><div class="info-icon">🛡️</div><div class="info-text"><strong>Labor Warranty</strong><p>All labor carries a 90-day workmanship warranty.</p></div></div>
+        <div class="info-item"><div class="info-icon">📦</div><div class="info-text"><strong>Parts</strong><p>Parts quoted separately. OEM and aftermarket options available.</p></div></div>
+        <div class="info-item"><div class="info-icon">⏱️</div><div class="info-text"><strong>Rush Repair</strong><p>Same-day service available for +$25 rush fee (subject to availability).</p></div></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ MAC SECTION ══════════════════════ -->
+    <section class="section" id="sec-mac" aria-labelledby="tab-mac">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-title"><span class="icon">🍎</span> Mac &amp; iMac Repair</div>
+          <div class="section-subtitle">MacBook Air, MacBook Pro, iMac, Mac Mini, Mac Studio</div>
+        </div>
+        <div class="section-note">💡 Apple parts quoted separately</div>
+      </div>
+
+      <table class="price-table" id="mac-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Difficulty</th>
+            <th>Est. Time</th>
+            <th>Labor Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-header"><td colspan="4">🔍 Diagnostics &amp; Software</td></tr>
+          <tr>
+            <td><div class="service-name">Full Mac Diagnostics</div><div class="service-note">Apple diagnostics + system profiler review</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>1 hr</td>
+            <td class="price-cell"><div class="price">$45</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">macOS Reinstall / Upgrade</div><div class="service-note">Clean install or in-place upgrade</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>1–2 hrs</td>
+            <td class="price-cell"><div class="price">$60</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Time Machine Backup / Restore</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>1–3 hrs</td>
+            <td class="price-cell"><div class="price">$50 – $75</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Malware / Adware Removal</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1–2 hrs</td>
+            <td class="price-cell"><div class="price">$60</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Apple ID / iCloud Unlock Assistance <span class="badge badge-call">Quote</span></div><div class="service-note">Account access support only</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>30–60 min</td>
+            <td class="price-cell"><div class="price">$55</div></td>
+          </tr>
+
+          <tr class="group-header"><td colspan="4">⚙️ Hardware Repair</td></tr>
+          <tr>
+            <td><div class="service-name">SSD Replacement (Mac / MacBook) <span class="badge badge-popular">Popular</span></div><div class="service-note">Data migration included</div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>2–4 hrs</td>
+            <td class="price-cell"><div class="price">$85 – $120</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">RAM Upgrade (Intel Mac)</div><div class="service-note">Not available on Apple Silicon</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1 hr</td>
+            <td class="price-cell"><div class="price">$55</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Battery Replacement (MacBook)</div><div class="service-note">Includes calibration</div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>1–2 hrs</td>
+            <td class="price-cell"><div class="price">$75 – $100</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Keyboard Replacement (MacBook) <span class="badge badge-popular">Popular</span></div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>2–4 hrs</td>
+            <td class="price-cell"><div class="price">$90 – $130</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Screen Replacement (MacBook)</div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>2–3 hrs</td>
+            <td class="price-cell"><div class="price">$90 – $150</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">iMac Screen Replacement</div><div class="service-note">27" / 24" models</div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>3–5 hrs</td>
+            <td class="price-cell"><div class="price">$150 – $200</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Charging Port Repair (MagSafe/USB-C)</div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>1–2 hrs</td>
+            <td class="price-cell"><div class="price">$75 – $100</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Liquid Damage Assessment &amp; Repair <span class="badge badge-call">Quote</span></div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>Varies</td>
+            <td class="price-cell"><div class="price">$100 – $250+</div><div class="price-range">Call for quote</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Fan Cleaning &amp; Thermal Paste (MacBook)</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1–2 hrs</td>
+            <td class="price-cell"><div class="price">$65</div></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="info-box">
+        <div class="info-item"><div class="info-icon">⚠️</div><div class="info-text"><strong>Apple Silicon Note</strong><p>M1/M2/M3/M4 chips have soldered RAM & SSD. Some repairs are limited by design.</p></div></div>
+        <div class="info-item"><div class="info-icon">🛡️</div><div class="info-text"><strong>90-Day Warranty</strong><p>All labor is covered by our 90-day workmanship guarantee.</p></div></div>
+        <div class="info-item"><div class="info-icon">🔩</div><div class="info-text"><strong>OEM Parts</strong><p>We use quality OEM-spec parts. Original Apple parts available on request.</p></div></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ LAPTOP SECTION ══════════════════════ -->
+    <section class="section" id="sec-laptop" aria-labelledby="tab-laptop">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-title"><span class="icon">💻</span> Laptop Repair</div>
+          <div class="section-subtitle">Windows Laptops, Chromebooks, Ultrabooks</div>
+        </div>
+        <div class="section-note">💡 Parts quoted separately</div>
+      </div>
+
+      <table class="price-table" id="laptop-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Difficulty</th>
+            <th>Est. Time</th>
+            <th>Labor Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-header"><td colspan="4">🔍 Diagnostics &amp; Software</td></tr>
+          <tr>
+            <td><div class="service-name">Full Laptop Diagnostics</div><div class="service-note">Hardware, battery, display, thermals</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>1 hr</td>
+            <td class="price-cell"><div class="price">$35</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">OS Reinstall / Recovery</div><div class="service-note">Windows / ChromeOS</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>1–2 hrs</td>
+            <td class="price-cell"><div class="price">$50</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Virus / Malware Removal</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1–3 hrs</td>
+            <td class="price-cell"><div class="price">$55 – $75</div></td>
+          </tr>
+
+          <tr class="group-header"><td colspan="4">🖥️ Screen &amp; Display</td></tr>
+          <tr>
+            <td><div class="service-name">LCD Screen Replacement <span class="badge badge-popular">Popular</span></div><div class="service-note">14"–15.6" standard</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1–2 hrs</td>
+            <td class="price-cell"><div class="price">$65 – $95</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Touchscreen / Digitizer Replacement</div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>2–3 hrs</td>
+            <td class="price-cell"><div class="price">$85 – $120</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Hinge Repair / Replacement</div><div class="service-note">One or both hinges</div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>2–3 hrs</td>
+            <td class="price-cell"><div class="price">$75 – $100</div></td>
+          </tr>
+
+          <tr class="group-header"><td colspan="4">⚡ Hardware</td></tr>
+          <tr>
+            <td><div class="service-name">Battery Replacement <span class="badge badge-popular">Popular</span></div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>45–90 min</td>
+            <td class="price-cell"><div class="price">$55 – $80</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">RAM Upgrade / Replacement</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>30–45 min</td>
+            <td class="price-cell"><div class="price">$40</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">HDD to SSD Upgrade + Data Migration</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>2–3 hrs</td>
+            <td class="price-cell"><div class="price">$65 – $85</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Keyboard Replacement</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1–2 hrs</td>
+            <td class="price-cell"><div class="price">$55 – $80</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Charging Port Repair / Replacement</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1–2 hrs</td>
+            <td class="price-cell"><div class="price">$60 – $85</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Thermal Paste + Fan Cleaning</div><div class="service-note">Overheating / performance fix</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1–2 hrs</td>
+            <td class="price-cell"><div class="price">$55</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Liquid Damage Repair <span class="badge badge-call">Quote</span></div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>Varies</td>
+            <td class="price-cell"><div class="price">$80 – $180+</div><div class="price-range">Call for quote</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">DC Jack / Power Board Replacement</div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>1–2 hrs</td>
+            <td class="price-cell"><div class="price">$65 – $90</div></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="info-box">
+        <div class="info-item"><div class="info-icon">💡</div><div class="info-text"><strong>Brand Coverage</strong><p>HP, Dell, Lenovo, ASUS, Acer, MSI, Samsung, Toshiba &amp; more.</p></div></div>
+        <div class="info-item"><div class="info-icon">🛡️</div><div class="info-text"><strong>90-Day Warranty</strong><p>All labor is covered by our 90-day workmanship guarantee.</p></div></div>
+        <div class="info-item"><div class="info-icon">🚀</div><div class="info-text"><strong>Rush Service</strong><p>Same-day available for +$25. Call ahead to confirm slot availability.</p></div></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ PHONE SECTION ══════════════════════ -->
+    <section class="section" id="sec-phone" aria-labelledby="tab-phone">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-title"><span class="icon">📱</span> Phone Repair</div>
+          <div class="section-subtitle">iPhone, Samsung, Google Pixel &amp; More</div>
+        </div>
+        <div class="section-note">💡 Parts quoted separately</div>
+      </div>
+
+      <table class="price-table" id="phone-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Difficulty</th>
+            <th>Est. Time</th>
+            <th>Labor Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-header"><td colspan="4">🍎 iPhone Repairs</td></tr>
+          <tr>
+            <td><div class="service-name">iPhone Screen Replacement <span class="badge badge-popular">Popular</span></div><div class="service-note">OLED / LCD depending on model</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>30–60 min</td>
+            <td class="price-cell"><div class="price">$45 – $85</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">iPhone Battery Replacement <span class="badge badge-popular">Popular</span></div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>30 min</td>
+            <td class="price-cell"><div class="price">$35 – $55</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">iPhone Charging Port Repair</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>45–60 min</td>
+            <td class="price-cell"><div class="price">$55 – $75</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">iPhone Back Glass Replacement</div><div class="service-note">iPhone 8 and later</div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>1–2 hrs</td>
+            <td class="price-cell"><div class="price">$65 – $100</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">iPhone Camera Repair / Replacement</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>45–60 min</td>
+            <td class="price-cell"><div class="price">$55 – $80</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">iPhone Speaker / Microphone Repair</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>45–60 min</td>
+            <td class="price-cell"><div class="price">$50 – $70</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">iPhone Liquid Damage Repair <span class="badge badge-call">Quote</span></div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>Varies</td>
+            <td class="price-cell"><div class="price">$75 – $150+</div><div class="price-range">Depends on severity</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">iPhone Data Recovery <span class="badge badge-call">Quote</span></div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>Varies</td>
+            <td class="price-cell"><div class="price">$80 – $200+</div></td>
+          </tr>
+
+          <tr class="group-header"><td colspan="4">📲 Android &amp; Samsung Repairs</td></tr>
+          <tr>
+            <td><div class="service-name">Android Screen Replacement <span class="badge badge-popular">Popular</span></div><div class="service-note">Samsung, Google Pixel, OnePlus, etc.</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>30–90 min</td>
+            <td class="price-cell"><div class="price">$50 – $95</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Android Battery Replacement</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>30–45 min</td>
+            <td class="price-cell"><div class="price">$35 – $55</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Android Charging Port Repair</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>45–60 min</td>
+            <td class="price-cell"><div class="price">$50 – $70</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Android Back Cover Replacement</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>30–45 min</td>
+            <td class="price-cell"><div class="price">$40 – $60</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Factory Reset / Software Restore</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>30–60 min</td>
+            <td class="price-cell"><div class="price">$35</div></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="info-box">
+        <div class="info-item"><div class="info-icon">📱</div><div class="info-text"><strong>Models Supported</strong><p>iPhone 6 through iPhone 16 Pro Max. Samsung S / A / Note series. Google Pixel &amp; more.</p></div></div>
+        <div class="info-item"><div class="info-icon">⚡</div><div class="info-text"><strong>Quick Turnaround</strong><p>Most phone repairs completed in under 1 hour while you wait.</p></div></div>
+        <div class="info-item"><div class="info-icon">🛡️</div><div class="info-text"><strong>90-Day Warranty</strong><p>All screen and battery replacements warranted for 90 days.</p></div></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ TABLET SECTION ══════════════════════ -->
+    <section class="section" id="sec-tablet" aria-labelledby="tab-tablet">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <div class="section-title"><span class="icon">📟</span> iPad &amp; Tablet Repair</div>
+          <div class="section-subtitle">iPad, Samsung Galaxy Tab, Surface, Android Tablets</div>
+        </div>
+        <div class="section-note">💡 Parts quoted separately</div>
+      </div>
+
+      <table class="price-table" id="tablet-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Difficulty</th>
+            <th>Est. Time</th>
+            <th>Labor Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-header"><td colspan="4">📱 iPad Repairs (Apple)</td></tr>
+          <tr>
+            <td><div class="service-name">iPad Screen / Glass Replacement <span class="badge badge-popular">Popular</span></div><div class="service-note">Digitizer + LCD combo</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1–2 hrs</td>
+            <td class="price-cell"><div class="price">$65 – $110</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">iPad Pro Screen Replacement</div><div class="service-note">11" / 12.9" models</div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>2–3 hrs</td>
+            <td class="price-cell"><div class="price">$100 – $160</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">iPad Battery Replacement <span class="badge badge-popular">Popular</span></div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1–1.5 hrs</td>
+            <td class="price-cell"><div class="price">$60 – $90</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">iPad Charging Port Repair</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1 hr</td>
+            <td class="price-cell"><div class="price">$65 – $80</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">iPad Home Button Repair</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>45 min</td>
+            <td class="price-cell"><div class="price">$55</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">iPad Camera Replacement</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>45–60 min</td>
+            <td class="price-cell"><div class="price">$60 – $80</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">iPad Software Restore / Factory Reset</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>30–60 min</td>
+            <td class="price-cell"><div class="price">$40</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">iPad Liquid Damage Repair <span class="badge badge-call">Quote</span></div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>Varies</td>
+            <td class="price-cell"><div class="price">$80 – $160+</div><div class="price-range">Call for quote</div></td>
+          </tr>
+
+          <tr class="group-header"><td colspan="4">📡 Samsung Galaxy Tab &amp; Android Tablets</td></tr>
+          <tr>
+            <td><div class="service-name">Samsung Tab Screen Replacement <span class="badge badge-popular">Popular</span></div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1–2 hrs</td>
+            <td class="price-cell"><div class="price">$65 – $100</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Android Tablet Battery Replacement</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1 hr</td>
+            <td class="price-cell"><div class="price">$55 – $75</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Android Tablet Charging Port Repair</div></td>
+            <td><div class="complexity"><span class="dot amber"></span><span class="complexity-label">Medium</span></div></td>
+            <td>1 hr</td>
+            <td class="price-cell"><div class="price">$55 – $70</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Surface Pro Screen Replacement</div><div class="service-note">Microsoft Surface models</div></td>
+            <td><div class="complexity"><span class="dot red"></span><span class="complexity-label">Advanced</span></div></td>
+            <td>2–3 hrs</td>
+            <td class="price-cell"><div class="price">$100 – $150</div></td>
+          </tr>
+          <tr>
+            <td><div class="service-name">Tablet Software / OS Restore</div></td>
+            <td><div class="complexity"><span class="dot green"></span><span class="complexity-label">Easy</span></div></td>
+            <td>30–60 min</td>
+            <td class="price-cell"><div class="price">$40</div></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="info-box">
+        <div class="info-item"><div class="info-icon">📟</div><div class="info-text"><strong>Models Supported</strong><p>All iPad generations, Samsung Galaxy Tab, Microsoft Surface, Kindle Fire &amp; more.</p></div></div>
+        <div class="info-item"><div class="info-icon">🔬</div><div class="info-text"><strong>Free Assessment</strong><p>We check your tablet's condition before committing to any repair quote.</p></div></div>
+        <div class="info-item"><div class="info-icon">🛡️</div><div class="info-text"><strong>90-Day Warranty</strong><p>All repairs guaranteed for 90 days from date of service.</p></div></div>
+        <div class="info-item"><div class="info-icon">🏠</div><div class="info-text"><strong>Walk-In Welcome</strong><p>No appointment needed for most tablet repairs. Drop in anytime!</p></div></div>
+      </div>
+    </section>
+
+  </div><!-- /.tabs-wrap -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">⚡ Taotin Repair &amp; Tech Services</div>
+      <p class="footer-note">
+        <strong>Prices listed are labor costs only.</strong> Parts are quoted separately based on model and availability.<br />
+        Prices are subject to change. Final quote provided after free diagnostic assessment.<br />
+        All repairs carry a <strong>90-day labor warranty</strong>. Rush service available for +$25.
+      </p>
+      <p class="footer-copy">© 2026 Taotin Repair &amp; Tech Services. All rights reserved.</p>
+    </div>
+  </footer>
+
+</div><!-- /.wrapper -->
+
+<script>
+  // Tab switching
+  function showTab(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-selected', 'false');
+    });
+    document.getElementById('sec-' + id).classList.add('active');
+    const btn = document.getElementById('tab-' + id);
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+  }
+
+  // Animate rows on tab switch with stagger
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setTimeout(() => {
+        const rows = document.querySelectorAll('.section.active .price-table tbody tr');
+        rows.forEach((row, i) => {
+          row.style.opacity = '0';
+          row.style.transform = 'translateY(12px)';
+          setTimeout(() => {
+            row.style.transition = 'opacity .3s ease, transform .3s ease';
+            row.style.opacity = '1';
+            row.style.transform = 'translateY(0)';
+          }, i * 30);
+        });
+      }, 10);
+    });
+  });
+
+  // Logo loaded — no fallback needed
+</script>
+</body>
+</html>
